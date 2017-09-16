@@ -339,7 +339,7 @@ angular.module('wheatherApp', ['simple-autocomplete']).controller('SampleCtrl', 
     $scope.getData = function() {
 
         if ($scope.selectedData == null) {
-            alert('boş geçilemez');
+            alert('şehir ismi boş geçilemez');
         } else {
 
             $scope.date = new Date();

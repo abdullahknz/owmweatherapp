@@ -330,7 +330,6 @@ angular.module('wheatherApp', ['simple-autocomplete']).controller('SampleCtrl', 
         }
     ]
 
-
     $scope.onSelect = function(selection) {
         console.log(selection);
 

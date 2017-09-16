@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>OWM WEATHER APP</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+
+    <link rel="stylesheet" href="../src/simple-autocomplete.css">
+    <link rel="stylesheet" href="../src/main.css">
+    <script type="text/javascript" src="../src/simple-autocomplete.js"></script>
+    <script type="text/javascript" src="sample.js"></script>
+</head>
+
+<body ng-app="wheatherApp" ng-controller="SampleCtrl">
+    <div id="container" style="margin-top: 25em; margin-left: 30em;">
+        <div class="row">
+            <div class="col-lg-8 col-md-6 col-sm-6 col-xs-5">
+                <div class="input-group">
+                    <autocomplete ng-show="searchbox" id='searchbox' type='text' options="datas" place-holder="Şehir ara..." on-select="onSelect" display-property="name" input-class="form-control" clear-input="false"></autocomplete>
+                    <span class="input-group-btn">
+        <button  ng-show="searchbox" type="button" ng-click="getData()" class="btn btn-outline-secondary" type="button">Ara</button>
+      </span>
+                </div>
+            </div>
+        </div>
+        <div class="container" ng-show="expression">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div class="navbar-header" style="padding-left: 10px">
+                        <button ng-click="back()" type="button" class="btn btn-default navbar-btn pull-left">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </button>
+                        <div class="navbar-text navbar-brand-centered">
+                            <h3>Open Weather Map</h3>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="row" style="margin-top:10px;">
+                <h1 style="margin-left: 50px;">{{selectedData.name}}</h1>
+            </div>
+            <div class="row" style="margin-top:10px;">
+                <div class="col-md-3 col-lg-3 col-sm-3">
+                    <img src="{{icon}}" alt="">
+
+                    <span>{{date | date:'yyyy-MM-dd'}}</span>
+                    <h1>{{weatherData.main.temp}} &#x2103;</h1>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-3">
+
+                    <h1>Max. {{weatherData.main.temp_max}} &#8451;</h1>
+
+                    <h1>Min. {{weatherData.main.temp_min}} &#8451;</h1>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-3">
+                    <h2>Nem {{weatherData.main.humidity}}</h2>
+                    <h2>Basınç {{weatherData.main.pressure}}</h2>
+                    <h2>Rüzgar {{weatherData.wind.speed}} km</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-lg-3 col-sm-3">
+                    <h2>{{weatherData.weather[0].description}}</h2>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

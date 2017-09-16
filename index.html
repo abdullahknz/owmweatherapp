@@ -8,12 +8,13 @@
 
     <link rel="stylesheet" href="src/simple-autocomplete.css">
     <link rel="stylesheet" href="src/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="js/simple-autocomplete.js"></script>
     <script type="text/javascript" src="js/sample.js"></script>
 </head>
 
 <body ng-app="wheatherApp" ng-controller="SampleCtrl">
-    <div id="container" style="margin-top: 25em; margin-left: 30em;">
+    <div id="container" style="margin-top: 25em; margin-left: 30em; height: 100% !important;">
         <div class="row">
             <div class="col-lg-8 col-md-6 col-sm-6 col-xs-5">
                 <div class="input-group">
@@ -62,13 +63,55 @@
             <div class="row">
                 <div class="col-md-3 col-lg-3 col-sm-3">
                     <h2>{{weatherData.weather[0].description}}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+
+                        <div class="copyright">
+
+                            © 2017, Abdullah Kanza
+
+                        </div>
+
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+
+                        <div class="copyright">
+
+                            <a target="_blank" href="https://www.facebook.com/Aknza"><i class="fa fa-facebook"></i></a>
+                            <a target="_blank" href="https://twitter.com/abdullahknz"><i class="fa fa-twitter"></i></a>
+                            <a target="_blank" href="https://www.linkedin.com/in/abdullahkanza/"><i class="fa fa-linkedin"></i></a>
+                            <a target="_blank" href="https://www.github.com/abdullahknz/"><i class="fa fa-github"></i></a>
+                            <a target="_blank" href="https://dribbble.com/aknza"><i class="fa fa-dribbble"></i></a>
+
+                        </div>
+
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+
+                        <div class="design">
+
+                            <a href="#">Website </a> | <a target="_blank" href="http://www.abdullahkanza.com"> abdullahkanza.com</a>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
             </div>
-        </div>
-    </div>
 
+        </div>
+    </footer>
 </body>
 
 </html>
